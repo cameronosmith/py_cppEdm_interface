@@ -1,0 +1,3 @@
+[submodule "py_cpp_edm_interface/src/cppEDM"]
+	path = py_cpp_edm_interface/src/cppEDM
+	url = https://github.com/SoftwareLiteracyFoundation/cppEDM
