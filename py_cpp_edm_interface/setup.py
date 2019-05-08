@@ -26,6 +26,7 @@ ext_modules = [
         language='c++',
         library_dirs=["./lib"],
         libraries=['EDM'],
+	extra_compile_args = ["-stdlib=libc++","-std=c++11"], 
     ),
 ]
 

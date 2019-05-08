@@ -5,8 +5,8 @@ OBJ = Common.o AuxFunc.o Parameter.o Embed.o Interface.o Neighbors.o\
 
 LIB = libEDM.a
 
-CFLAGS = -fPIC -std=c++11 -g -DCCM_THREADED # -DDEBUG -DDEBUG_ALL
-LFLAGS = -L./ -lstdc++ -lEDM -lpthread -L./../../Eigen/ -lEigen
+CFLAGS = -fPIC -std=c++11 -g -DCCM_THREADED -I ../../
+LFLAGS = -L./ -lstdc++ -lEDM -lpthread 
 
 all:	$(LIB)
 	ar -rcs $(LIB) $(OBJ)
