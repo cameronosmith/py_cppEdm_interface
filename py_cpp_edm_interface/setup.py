@@ -10,23 +10,23 @@ import pybind11
 
 __version__ = '0.0.1'
 
-proj_name = "py_cpp_edm_interface"
+proj_name = "EDM_pybind"
 
-os.system("make -C src")
+#os.popopen("make -C src").readlines()
 
 ext_modules = [
     Extension(
         proj_name,
-        ['src/edmWrappers/WrapperExports.cpp',],
+        ['src/bindings/PyBind.cpp',],
         include_dirs=[
             # Path to pybind11 headers
             pybind11.get_include(),
             "src/cppEDM/src",
         ],
         language='c++',
-        library_dirs=["./lib"],
+        library_dirs=["./src/cppEDM/lib"],
         libraries=['EDM'],
-	extra_compile_args = ["-stdlib=libc++","-std=c++11"], 
+	#extra_compile_args = ["-stdlib=libc++","-std=c++11"], 
     ),
 ]
 
